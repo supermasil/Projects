@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="530cfd45-6e23-42d2-8bb4-33c4c76cb6b6" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/proj3$MapServer.coverage" NAME="MapServer Coverage Results" MODIFIED="1523670240663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/proj3$TestGraphBuilding.coverage" NAME="TestGraphBuilding Coverage Results" MODIFIED="1523779840193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/proj3$TestGraphBuilding_testAutoComplete.coverage" NAME="TestGraphBuilding.testAutoComplete Coverage Results" MODIFIED="1524144708366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="750">
+      <file leaf-file-name="GraphDB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GraphDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11832">
+              <caret line="414" column="104" lean-forward="false" selection-start-line="414" selection-start-column="104" selection-end-line="414" selection-end-column="104" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#GraphDB#0" expanded="false" />
+                <element signature="docComment;field#nodes#0;class#GraphDB#0" expanded="false" />
+                <element signature="docComment;method#clean#0;class#GraphDB#0" expanded="false" />
+                <element signature="method#clean#0;class#GraphDB#0" expanded="false" />
+                <element signature="docComment;method#vertices#0;class#GraphDB#0" expanded="false" />
+                <element signature="method#vertices#0;class#GraphDB#0" expanded="false" />
+                <element signature="docComment;method#adjacent#0;class#GraphDB#0" expanded="false" />
+                <element signature="method#adjacent#0;class#GraphDB#0" expanded="false" />
+                <element signature="docComment;method#distance#0;class#GraphDB#0" expanded="false" />
+                <element signature="method#distance#0;class#GraphDB#0" expanded="false" />
+                <element signature="e#7750#7988#0" expanded="false" />
+                <element signature="e#8588#8727#0" expanded="false" />
+                <element signature="e#8751#8752#0" expanded="true" />
+                <element signature="e#8833#8834#0" expanded="true" />
+                <element signature="e#8840#8977#0" expanded="false" />
+                <element signature="e#9001#9002#0" expanded="true" />
+                <element signature="e#9083#9084#0" expanded="true" />
+                <element signature="class#9090:9456" expanded="false" />
+                <element signature="method#Node#0;class#9090:9456" expanded="false" />
+                <element signature="class#9462:9734" expanded="false" />
+                <element signature="method#Way#0;class#9462:9734" expanded="false" />
+                <element signature="e#10144#10518#0" expanded="false" />
+                <element signature="e#10579#10580#0" expanded="true" />
+                <element signature="e#10639#10640#0" expanded="true" />
+                <element signature="e#12194#12195#0" expanded="true" />
+                <element signature="e#12236#12237#0" expanded="true" />
+                <element signature="e#12296#12297#0" expanded="true" />
+                <element signature="e#12341#12342#0" expanded="true" />
+                <marker date="1524277489692" expanded="false" signature="7495:7744" ph="{...}" />
+                <marker date="1524277489692" expanded="false" signature="8030:8582" ph="{...}" />
+                <marker date="1524277489692" expanded="false" signature="9763:9828" ph="{...}" />
+                <marker date="1524277489692" expanded="false" signature="9872:10138" ph="{...}" />
+                <marker date="1524277489692" expanded="true" signature="11351:11930" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MapServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9280">
+              <caret line="269" column="0" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#ROOT_ULLAT#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#TILE_SIZE#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#ROUTE_STROKE_WIDTH_PX#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#ROUTE_STROKE_COLOR#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#HALT_RESPONSE#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#IMG_ROOT#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#OSM_DB_PATH#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#REQUIRED_RASTER_REQUEST_PARAMS#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#REQUIRED_ROUTE_REQUEST_PARAMS#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;field#REQUIRED_RASTER_RESULT_PARAMS#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;method#initialize#0;class#MapServer#0" expanded="false" />
+                <element signature="method#initialize#0;class#MapServer#0" expanded="false" />
+                <element signature="e#4537#4769#0" expanded="false" />
+                <element signature="e#6717#6793#0" expanded="false" />
+                <element signature="e#7528#7636#0" expanded="false" />
+                <element signature="docComment;method#getRequestParams#0;class#MapServer#0" expanded="false" />
+                <element signature="method#getRequestParams#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;method#writeImagesToOutputStream#0;class#MapServer#0" expanded="false" />
+                <element signature="e#10863#11196#0" expanded="false" />
+                <element signature="method#getImage#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;method#clearRoute#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;method#validateRasteredImgParams#0;class#MapServer#0" expanded="false" />
+                <element signature="method#validateRasteredImgParams#0;class#MapServer#0" expanded="false" />
+                <element signature="docComment;method#getDirectionsText#0;class#MapServer#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Router.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding>
+                <element signature="docComment;class#NavigationDirection#0;class#Router#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestGraphBuilding.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestGraphBuilding.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8178">
+              <caret line="147" column="54" lean-forward="false" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphBuildingHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GraphBuildingHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7366">
+              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rasterer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Rasterer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>195433876</find>
+      <find>adj</find>
+      <find>3264470131</find>
+      <find>1250673</find>
+      <find>clean</find>
+      <find>highway</find>
+      <find>1964475159</find>
+      <find>235606510</find>
+      <find>267631978</find>
+      <find>417724587</find>
+      <find>allow</find>
+      <find>3347</find>
+      <find>1026001234</find>
+      <find>3347105714</find>
+      <find>nodetonode</find>
+      <find>LASTNODE</find>
+      <find>shortest</find>
+      <find>router</find>
+      <find>760706748</find>
+      <find>Centennial</find>
+      <find>previou</find>
+      <find>closest</find>
+      <find>distances</find>
+      <find>graph</find>
+      <find>name</find>
+      <find>way</find>
+      <find>wright</find>
+      <find>get</find>
+      <find>location</find>
+      <find>print</find>
+    </findStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/example/CSCourseDBHandler.java" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/test2.html" />
+        <option value="$PROJECT_DIR$/berkeley-2018-small.osm.xml" />
+        <option value="$PROJECT_DIR$/../library-sp18/data/berkeley-2018-small.osm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Router.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MapServer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestRasterer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/example/CSCourseDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GraphBuildingHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestGraphBuilding.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GraphDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rasterer.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-14" />
+    <option name="width" value="1948" />
+    <option name="height" value="2074" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\BERKELEY\COMPSCI 61B\Bash\sp18-awk\proj3" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MapServer">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="MapServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="MapServer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="proj3" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration name="TestGraphBuilding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="proj3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestGraphBuilding" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestGraphBuilding.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="proj3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestGraphBuilding" />
+      <option name="METHOD_NAME" value="search" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestGraphBuilding.testAutoComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="proj3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestGraphBuilding" />
+      <option name="METHOD_NAME" value="testAutoComplete" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestGraphBuilding.testSearchByLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="proj3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestGraphBuilding" />
+      <option name="METHOD_NAME" value="testSearchByLocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.TestGraphBuilding" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestGraphBuilding.testAutoComplete" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestGraphBuilding.search" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MapServer" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestGraphBuilding.testSearchByLocation" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.MapServer" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestGraphBuilding.testAutoComplete" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestGraphBuilding.testSearchByLocation" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestGraphBuilding.search" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestGraphBuilding" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="530cfd45-6e23-42d2-8bb4-33c4c76cb6b6" name="Default" comment="" />
+      <created>1523661397817</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523661397817</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 29m 02s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 31m 52s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 31m 53s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 32m 44s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 34m 28s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 34m 34s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 35m 32s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 36m 49s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 37m 33s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGraphBuilding_testAutoComplete - 2018.04.19 at 06h 37m 55s.xml">
+      <configuration name="TestGraphBuilding.testAutoComplete" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295519" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3601815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33125356" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20869099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3936472" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982263" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/TestRouter.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="71" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((GraphDB)this).ways" custom="GraphDB" />
+        <watch expression="((HashMap)((Way)((HashMap.Node)((HashMap)((GraphDB)this).ways).entrySet().toArray()[0]).getValue()).extraInfo).entrySet().toArray()[0]" custom="GraphDB.Way,GraphDB,java.util.HashMap.Node,java.util.HashMap" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/berkeley-2018.osm.xml">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="1122242">
+          <caret line="19349" column="20" lean-forward="false" selection-start-line="19349" selection-start-column="16" selection-end-line="19349" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestGraphBuilding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8584">
+          <caret line="154" column="66" lean-forward="false" selection-start-line="154" selection-start-column="66" selection-end-line="154" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MapServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2900">
+          <caret line="90" column="4" lean-forward="false" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROOT_ULLAT#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#TILE_SIZE#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROUTE_STROKE_WIDTH_PX#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROUTE_STROKE_COLOR#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#HALT_RESPONSE#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#IMG_ROOT#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#OSM_DB_PATH#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_RASTER_REQUEST_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_ROUTE_REQUEST_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_RASTER_RESULT_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#initialize#0;class#MapServer#0" expanded="false" />
+            <element signature="method#initialize#0;class#MapServer#0" expanded="false" />
+            <element signature="e#4537#4769#0" expanded="false" />
+            <element signature="e#6717#6793#0" expanded="false" />
+            <element signature="e#7528#7636#0" expanded="false" />
+            <element signature="docComment;method#getRequestParams#0;class#MapServer#0" expanded="false" />
+            <element signature="method#getRequestParams#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#writeImagesToOutputStream#0;class#MapServer#0" expanded="false" />
+            <element signature="e#10863#11196#0" expanded="false" />
+            <element signature="method#getImage#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#clearRoute#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#validateRasteredImgParams#0;class#MapServer#0" expanded="false" />
+            <element signature="method#validateRasteredImgParams#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#getDirectionsText#0;class#MapServer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestRasterer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/CSCourseDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphBuildingHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9570">
+          <caret line="172" column="66" lean-forward="false" selection-start-line="172" selection-start-column="66" selection-end-line="172" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11020">
+          <caret line="374" column="53" lean-forward="false" selection-start-line="374" selection-start-column="53" selection-end-line="374" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;field#nodes#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#clean#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#clean#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#vertices#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#vertices#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#adjacent#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#adjacent#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#distance#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#distance#0;class#GraphDB#0" expanded="false" />
+            <element signature="e#7750#7988#0" expanded="false" />
+            <element signature="e#8588#8727#0" expanded="false" />
+            <element signature="e#8751#8752#0" expanded="true" />
+            <element signature="e#8833#8834#0" expanded="true" />
+            <element signature="e#8840#8977#0" expanded="false" />
+            <element signature="e#9001#9002#0" expanded="true" />
+            <element signature="e#9083#9084#0" expanded="true" />
+            <element signature="class#9090:9456" expanded="false" />
+            <element signature="method#Node#0;class#9090:9456" expanded="false" />
+            <element signature="class#9462:9734" expanded="false" />
+            <element signature="method#Way#0;class#9462:9734" expanded="false" />
+            <element signature="e#10144#10518#0" expanded="false" />
+            <element signature="e#10579#10580#0" expanded="true" />
+            <element signature="e#10639#10640#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
+            <element signature="e#12236#12237#0" expanded="true" />
+            <element signature="e#12296#12297#0" expanded="true" />
+            <element signature="e#12341#12342#0" expanded="true" />
+            <marker date="1524277489692" expanded="false" signature="7495:7744" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="8030:8582" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="9763:9828" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="9872:10138" ph="{...}" />
+            <marker date="1524277489692" expanded="true" signature="11351:11930" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MapServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6032">
+          <caret line="292" column="68" lean-forward="true" selection-start-line="292" selection-start-column="68" selection-end-line="292" selection-end-column="68" />
+          <folding>
+            <element signature="docComment;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROOT_ULLAT#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#TILE_SIZE#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROUTE_STROKE_WIDTH_PX#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROUTE_STROKE_COLOR#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#HALT_RESPONSE#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#IMG_ROOT#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#OSM_DB_PATH#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_RASTER_REQUEST_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_ROUTE_REQUEST_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_RASTER_RESULT_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#initialize#0;class#MapServer#0" expanded="false" />
+            <element signature="method#initialize#0;class#MapServer#0" expanded="false" />
+            <element signature="e#4537#4769#0" expanded="false" />
+            <element signature="e#6717#6793#0" expanded="false" />
+            <element signature="e#7528#7636#0" expanded="false" />
+            <element signature="docComment;method#getRequestParams#0;class#MapServer#0" expanded="false" />
+            <element signature="method#getRequestParams#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#writeImagesToOutputStream#0;class#MapServer#0" expanded="false" />
+            <element signature="e#10863#11196#0" expanded="false" />
+            <element signature="method#getImage#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#clearRoute#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#validateRasteredImgParams#0;class#MapServer#0" expanded="false" />
+            <element signature="method#validateRasteredImgParams#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#getDirectionsText#0;class#MapServer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphBuildingHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7772">
+          <caret line="141" column="48" lean-forward="false" selection-start-line="141" selection-start-column="48" selection-end-line="141" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Router.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#NavigationDirection#0;class#Router#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestDirections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="33" column="61" lean-forward="false" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/directions_results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2900">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;field#nodes#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#clean#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#clean#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#vertices#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#vertices#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#adjacent#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#adjacent#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#distance#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#distance#0;class#GraphDB#0" expanded="false" />
+            <element signature="e#7750#7988#0" expanded="false" />
+            <element signature="e#8588#8727#0" expanded="false" />
+            <element signature="e#8751#8752#0" expanded="true" />
+            <element signature="e#8833#8834#0" expanded="true" />
+            <element signature="e#8840#8977#0" expanded="false" />
+            <element signature="e#9001#9002#0" expanded="true" />
+            <element signature="e#9083#9084#0" expanded="true" />
+            <element signature="class#9090:9456" expanded="false" />
+            <element signature="method#Node#0;class#9090:9456" expanded="false" />
+            <element signature="class#9462:9734" expanded="false" />
+            <element signature="method#Way#0;class#9462:9734" expanded="false" />
+            <element signature="e#10144#10518#0" expanded="false" />
+            <element signature="e#10579#10580#0" expanded="true" />
+            <element signature="e#10639#10640#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
+            <element signature="e#12236#12237#0" expanded="true" />
+            <element signature="e#12296#12297#0" expanded="true" />
+            <element signature="e#12341#12342#0" expanded="true" />
+            <marker date="1524277489692" expanded="false" signature="7495:7744" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="8030:8582" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="9763:9828" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="9872:10138" ph="{...}" />
+            <marker date="1524277489692" expanded="true" signature="11351:11930" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3538">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphBuildingHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8584">
+          <caret line="155" column="37" lean-forward="false" selection-start-line="155" selection-start-column="37" selection-end-line="155" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rasterer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testTwelveImages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1234.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="26" column="46" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphDBLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/CSCourseDBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3480">
+          <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="172" column="0" lean-forward="false" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.xml/com/sun/org/apache/xerces/internal/impl/XMLDocumentFragmentScannerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6380">
+          <caret line="2878" column="0" lean-forward="false" selection-start-line="2878" selection-start-column="0" selection-end-line="2878" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.xml/org/xml/sax/InputSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../library-sp18/data/berkeley-2018-small.osm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29189">
+          <caret line="283" column="30" lean-forward="true" selection-start-line="283" selection-start-column="30" selection-end-line="283" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.xml/com/sun/org/apache/xerces/internal/parsers/AbstractXMLDocumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../library-sp18/data/tiny-clean.osm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestRouter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2030">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_params.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11600">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../library-sp18/data/berkeley-2018.osm.xml">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="347">
+          <caret line="13071" column="56" lean-forward="false" selection-start-line="13071" selection-start-column="52" selection-end-line="13071" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/directions_results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestDirections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.7.2/spark-core-2.7.2.jar!/spark/Filter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestRasterer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/CSCourseDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/berkeley-2018.osm.xml">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="47177">
+          <caret line="3019" column="23" lean-forward="false" selection-start-line="3019" selection-start-column="20" selection-end-line="3019" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/berkeley-2018-small.osm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1663">
+          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestGraphBuildingTiny.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphBuildingHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7366">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestGraphBuilding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8178">
+          <caret line="147" column="54" lean-forward="false" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Router.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="docComment;class#NavigationDirection#0;class#Router#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GraphDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11832">
+          <caret line="414" column="104" lean-forward="false" selection-start-line="414" selection-start-column="104" selection-end-line="414" selection-end-column="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;field#nodes#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#clean#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#clean#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#vertices#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#vertices#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#adjacent#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#adjacent#0;class#GraphDB#0" expanded="false" />
+            <element signature="docComment;method#distance#0;class#GraphDB#0" expanded="false" />
+            <element signature="method#distance#0;class#GraphDB#0" expanded="false" />
+            <element signature="e#7750#7988#0" expanded="false" />
+            <element signature="e#8588#8727#0" expanded="false" />
+            <element signature="e#8751#8752#0" expanded="true" />
+            <element signature="e#8833#8834#0" expanded="true" />
+            <element signature="e#8840#8977#0" expanded="false" />
+            <element signature="e#9001#9002#0" expanded="true" />
+            <element signature="e#9083#9084#0" expanded="true" />
+            <element signature="class#9090:9456" expanded="false" />
+            <element signature="method#Node#0;class#9090:9456" expanded="false" />
+            <element signature="class#9462:9734" expanded="false" />
+            <element signature="method#Way#0;class#9462:9734" expanded="false" />
+            <element signature="e#10144#10518#0" expanded="false" />
+            <element signature="e#10579#10580#0" expanded="true" />
+            <element signature="e#10639#10640#0" expanded="true" />
+            <element signature="e#12194#12195#0" expanded="true" />
+            <element signature="e#12236#12237#0" expanded="true" />
+            <element signature="e#12296#12297#0" expanded="true" />
+            <element signature="e#12341#12342#0" expanded="true" />
+            <marker date="1524277489692" expanded="false" signature="7495:7744" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="8030:8582" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="9763:9828" ph="{...}" />
+            <marker date="1524277489692" expanded="false" signature="9872:10138" ph="{...}" />
+            <marker date="1524277489692" expanded="true" signature="11351:11930" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MapServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9280">
+          <caret line="269" column="0" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROOT_ULLAT#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#TILE_SIZE#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROUTE_STROKE_WIDTH_PX#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#ROUTE_STROKE_COLOR#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#HALT_RESPONSE#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#IMG_ROOT#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#OSM_DB_PATH#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_RASTER_REQUEST_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_ROUTE_REQUEST_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;field#REQUIRED_RASTER_RESULT_PARAMS#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#initialize#0;class#MapServer#0" expanded="false" />
+            <element signature="method#initialize#0;class#MapServer#0" expanded="false" />
+            <element signature="e#4537#4769#0" expanded="false" />
+            <element signature="e#6717#6793#0" expanded="false" />
+            <element signature="e#7528#7636#0" expanded="false" />
+            <element signature="docComment;method#getRequestParams#0;class#MapServer#0" expanded="false" />
+            <element signature="method#getRequestParams#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#writeImagesToOutputStream#0;class#MapServer#0" expanded="false" />
+            <element signature="e#10863#11196#0" expanded="false" />
+            <element signature="method#getImage#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#clearRoute#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#validateRasteredImgParams#0;class#MapServer#0" expanded="false" />
+            <element signature="method#validateRasteredImgParams#0;class#MapServer#0" expanded="false" />
+            <element signature="docComment;method#getDirectionsText#0;class#MapServer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rasterer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
