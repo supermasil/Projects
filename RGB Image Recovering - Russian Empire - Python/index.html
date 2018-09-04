@@ -1,0 +1,167 @@
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS194-26: Image Manipulation and Computational Photography</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1 align="middle">CS194-26: Image Manipulation and Computational Photography, Fall 2017</h1>
+<h1 align="middle">Project 1: Images of the Russian Empire</h1>
+<h2 align="middle">Khoa Hoang - 3033239978 - cs194-26-aaq</h2>
+
+<br><br>
+
+<div>
+
+<h2 align="middle">Overview</h2>
+<p>The goal of this assignment is to take the digitized Prokudin-Gorskii glass plate images and, using image processing techniques, automatically produce a color image with as few visual artifacts as possible. In order to do this, you will need to extract the three color channel images, place them on top of each other, and align them so that they form a single RGB color image.</p>
+
+<h2 align="middle">Section I: Implementation</h2>
+
+<h3 align="middle">Part 1: Single-Scale</h3>
+
+<p>I chose SSD to calculate the differences between the RGB channels as it is the simplest working method in my opinion. The processing involves shifting the R and G over B in the range of [-15, 15] and selecting the displacements that have the smallest SSD.</p>
+
+<p>Since the borders really affect the SSD, so all the .jpg images are cropped by 20 px and all .tif images are cropped by 800 px on each side at the beginning. </p>
+
+<p>The only problem that I faced in this part is just the negative effect of the borders and it was solved by cropping as described above.</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/output_monastery.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Monastery G: [-3, 2], R: [3, 2]</figcaption>
+      </td>
+      <td>
+        <img src="images/output_cathedral.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Cathedral G: [5, 2], R: [12, 3]</figcaption>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <img src="images/output_settlers.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Settlers G: [7, 0], R: [14, -1]</figcaption>
+      </td>
+      <td>
+        <img src="images/output_nativity.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Nativity G: [3, 1], R: [7, 1]</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<h3 align="middle">Part 2: Multi-Scale</h3>
+
+<p>When the images become large, they take tremendously long time to be processed the same way as small jpg images are as the resolutions are much bigger, hence SSD will become very expensive to calculate. The problem was solved with pyramid method by scaling the images into different lower-resolution layers and using SSD at each level. The searching range is still [-15, 15] but at every level, not all the pixels are taken into account because it will be very costly for SSD, so only 200 px square at the center of each layer are considered.</p>
+
+<p> A few problems that I ran into includes not knowing how many levels of pyramid I should use, what searching range should be and the alrorithm took so long to process. All the problems were solved as described above.
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/output_harvesters.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Harvesters G: [60, 16], R: [124, 16]</figcaption>
+      </td>
+      <td>
+        <img src="images/output_icon.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Icon G: [40, 16], R: [88, 24]</figcaption>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <img src="images/output_lady.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Lady G: [52, 8], R: [112, 12]</figcaption>
+      </td>
+      <td>
+        <img src="images/output_self_portrait.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Nativity G: [76, 28], R: [168, 36]</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/output_three_generations.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Three Generations G: [48, 12], R: [108, 12]</figcaption>
+      </td>
+      <td>
+        <img src="images/output_train.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Train G: [44, 8], R: [88, 32]</figcaption>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <img src="images/output_turkmen.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Turkmen G: [56, 20], R: [116, 28]</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<h2 align="middle">Section II: Bells and Whistles</h2>
+
+<h3 align="middle">Edge Detection</h3>
+
+<p>These two pictures gave me a hard time as they have big difference in brightness and the method above was not enough to produce a precise alignment. The problem was solved by using edge detection algorithm by Roberts as the brightness are taken out of the equation and only the edges matter.</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/output_emir.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">After G: [48, 24], R: [108, 40]</figcaption>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <img src="images/output_village.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">After G: [64, 12], R: [136, 24]</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<h3 align="middle">Additional Images</h3>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/output_chasovnia.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Chasovnia G: [60, 8], R: [124, 4]</figcaption>
+      </td>
+      <td>
+        <img src="images/output_ostrechiny.jpg" align="middle" width="400px"/>
+        <figcaption align="middle">Ostrechiny G: [12, -8], R: [132, -12]</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
