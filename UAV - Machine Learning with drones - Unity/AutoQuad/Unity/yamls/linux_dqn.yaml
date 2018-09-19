@@ -1,0 +1,39 @@
+# YAML for linux DQN configuration
+
+train:
+  max_episode_length: 400
+  num_episodes: 10000
+  batch_size: 32
+  max_replay_len: 1000
+  model_file: "dqn_model.h5"
+  train_period: 5 #roughly once a second
+  train_on_demonstrations: True
+  demonstration_eval_episodes: 5
+  demonstration_epochs: 4 #times to train through each demonstration
+  train_after_episode: False
+  reinforce_good_episodes: 10
+  good_ep_thresh: 15000
+
+inference:
+  only_inference: False
+  num_inference_episodes: 10
+
+demonstrations:
+  state_file: "demonstrated_states.npz"
+  obs_file: "demonstrated_observations.npz"
+  act_file: "demonstrated_actions.npz"
+
+gpu:
+  device: 0 #-1 means use cpu
+
+system: 
+  os: "linux"
+  arch: "x86_64"
+  drone_sim: "drone_sim_external_linux_headless"
+  demonstration_drone_sim: "N/A"
+
+logging:
+  console_lvl: "debug"
+  log_prefix: "log/run_output"
+
+#TODO add model specific params
