@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+  <img class="w3-image" src="assets/4.jpg" alt="Me" width="1500" height="600">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">PROJECT 2</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">PROJECT 2</h5>
+    <h3 class="w3-hide-medium w3-hide-small">Building A Pinhole Camara</h3>
+    <h3 class="w3-hide-medium w3-hide-small">Shivam Parikh, Khoa Hoang, Ajay Ramesh, September 13, 2018</h3>
+  </div>
+  
+  <!-- Navbar (placed at the bottom of the header image) -->
+  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+    <a href="#build" class="w3-bar-item w3-button">Build</a>
+    <a href="#results" class="w3-bar-item w3-button">Results</a>
+    <a href="#bells" class="w3-bar-item w3-button">B&W</a>
+    <a href="#raw" class="w3-bar-item w3-button">Raw</a>
+  </div>
+</header>
+
+<!-- Navbar on small screens -->
+<div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
+<div class="w3-bar w3-light-grey">
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  <a href="#build" class="w3-bar-item w3-button">Build the Camera</a>
+  <a href="#results" class="w3-bar-item w3-button">Results</a>
+  <a href="#bells" class="w3-bar-item w3-button">Bells and Whistles</a>
+  <a href="#raw" class="w3-bar-item w3-button">Raw Images</a>
+</div>
+</div>
+  
+  <!-- Page content -->
+  <hr>
+  <h3 class="w3-center">OVERVIEW</h3>
+  <p class="w3-center">A pinhole camera lets light through a small 1mm-5mm hole known as the "pinhole" and forms an image on the other side of the pinhole. Instead of being scattered, light entering through the pinhole is "organized" such that the 3D world on the other side of the pinhole is reconstructed in 2D. This project involves building a pinhole camera with a cardboard box and some paper. We use a DSLR camera with long exposure to digitally capture the image formed on the pinhole camera's imaging plane.</p>
+
+
+
+  <div class="w3-content w3-padding-large w3-margin-top" id="build">
+  <h3 class="w3-center">1. LET'S BUILD IT</h3>
+
+  <p class="w3-center">A.... mess</p>
+  <img src="assets/1.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Artificial Light</p>
+  <img src="assets/2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Finally.... phewwww</p>
+  <img src="assets/3.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Sniper in ambush</p>
+  <img src="assets/4.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+
+
+  <!--FINAL RESULTS-->
+    <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="results">
+    <h3 class="w3-center">2. FINAL RESULTS TAAADAAAAAAAAA</h3>
+    <hr>
+    <p class="w3-center"> These are pictures after being cropped, rotated and enhanced.</p>
+
+    <p class="w3-center">Captain Ameicaaaaaaaaaaa</p>
+    <img src="Output/All_3_techniques_2.jpg" class="w3-image" width="1000" height="500">
+    <p class="w3-center">Is it Doe, my dear?</p>
+    <img src="Output/All_3_techniques_3.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">A grid of lightsabers?</p>
+    <img src="Output/All_3_techniques_8.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ughhh, can't see their faces.</p>
+    <img src="Output/All_3_techniques_9.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">Ghostinggggg</p>
+    <img src="Output/All_3_techniques_12.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">Hope I don't get into this loop, I wanna get outta schoollll</p>
+    <img src="Output/All_3_techniques_16.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  
+  
+
+  <!-- Contact -->
+    <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="bells">
+    <h3 class="w3-center">3. BELLS AND WHISTLES</h3>
+    <hr>
+    <h3 class="w3-center">3.1 Auto Cropping</h3>
+    <h3 class="w3-center">First Approach - Mathlab</h3>
+    <p class="w3-center"> Autocropping aims to localize the image plane of the pinhole camera inside the cardboard box, automatically. Here's an image of what the imaging plane of the pinhole camera looks like when captured by the DSLR.</p>
+    <img src="assets/original.jpg" class="w3-image" width="1000" height="500">
+    <p class="w3-center"> We recognize that the pixel intensities where the image is formed is much higher than the intensities of the pixels around it. This suggests a need for a global thresholding in order to binarize the image. This is what the binarized image looks like.</p>
+    <img src="assets/im_bw.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center"> You may notice that there are still some white blobs which don't belong to the imaging plane we're interested in. We use the MATLAB function <a href="https://www.mathworks.com/help/images/ref/bwareaopen.html">bwareaopen</a> to denoise the image by removing connected components of white pixels smaller than a specified area. Since the connected component we are interested in is much larger than the noise, this is easy. Here's the result of denoising.</p>
+    <img src="assets/im_bw_denoise.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center"> Now that we have segmented the region of interest, we need to compute a crop region. We recognize that the imaging plane is a convex shape, so we can use the MATLAB function <a href="https://www.mathworks.com/help/matlab/ref/convhull.html">convhull</a> to find the convex hull which is a tight set of vertices of a polygon surrounding the region of interest.</p>
+    <img src="assets/convhull.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center"> Finally, we find the closest rectangle to the computed convex hull (which we assume to be rectangular-ish) and do some color correction, described in the next section. Here's the output image of our algorithm.</p>
+    <img src="assets/corrected.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    
+
+    <hr>
+    <h3 class="w3-center">Second Approach - Python</h3>
+    <hr>
+    <p class="w3-center"> This approach searches for rows and columns which have higher intensities than or rows and columns and return the four corners of the most recognized parts of the image. </p>
+    
+    <hr>
+    <p class="w3-center"> This is the original image.</p>
+
+    <img src="source/2.jpg" class="w3-image" width="1000" height="500">
+
+    <p class="w3-center"> This is the result after cropping and rotating process. </p>
+    <img src="Output/Cropped2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center"> The black borders is almost completely eliminated.</p>
+    <hr>
+    <p class="w3-center"> The biggest challenge was to choose a threshold that works for every image and the problem was solved by averaging out the max and min intensities in both rows and columns.</p>
+
+    <hr>
+    <h3 class="w3-center">3.2 Image Enhancing</h3>
+    <hr>
+    <p class="w3-center"> First, I tried to use fuction rescale_intensity in Skimage library to balance the intensity of the image.</p>
+
+    <p class="w3-center"> Before</p>
+    <img src="Output/Cropped2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center"> After</p>
+    <img src="Output/Inten_Bal2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center"> Secondly, I tested the with function equalize_hist in Skimage library to balance the histogram.</p>
+
+
+    <p class="w3-center"> Before</p>
+    <img src="Output/Cropped2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+
+    <p class="w3-center"> After </p>
+    <img src="Output/Histo_Bal2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+
+    <p class="w3-center"> Then I tried another function called adapthist in the same library to see if it made any difference.</p>
+    <p class="w3-center"> Before</p>
+    <img src="Output/Cropped2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center"> After </p>
+    <img src="Output/Adapthist2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+
+    <p class="w3-center">Finally, I combined all three methods above.</p>
+    <p class="w3-center"> Before</p>
+    <img src="Output/Cropped2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center"> After </p>
+    <img src="Output/All_3_techniques_2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+
+
+    <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="raw">
+    <h3 class="w3-center">4. RAW IMAGES</h3>
+    <hr>
+    <p class="w3-center"> These are different results in different apartures, locations, and time in the day</p>
+
+    <img src="Source/1.jpg" class="w3-image" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/2.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/3.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/4.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/5.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/6.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/7.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/8.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/9.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/10.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/11.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/12.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/13.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/14.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/15.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/16.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/17.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/18.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+    <img src="Source/19.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+    <p class="w3-center">ADD HERE</p>
+
+  </div>
+
+<!-- End page content -->
+</div>
+
+</body>
+</html>

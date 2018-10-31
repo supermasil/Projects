@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<title>CS194 - Face Morphing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Project 4<br>Face Morphing</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#overview" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Overview</a> 
+    <a href="#defining_correspondences" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Defining Correspondences</a> 
+    <a href="#midway_face" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Midway Face</a> 
+    <a href="#morph_sequence" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Morph Sequence</a> 
+    <a href="#mean_face" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Mean Face</a> 
+    <a href="#carricatures" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Carricatures</a>
+    <a href="#bells" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bells and Whistles</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Project 4 - Face Morphing</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Overview -->
+  <div class="w3-container" style="margin-top:80px" id="overview">
+    <h1 class="w3-jumbo"><b>Khoa Hoang</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Overview.</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p> The project attempts morphing between different faces by a-2 step process: Warping and
+      cross-dissolving of the image colors.</p>
+    <p> The warping process is defined by choosing multiple corresponding points on each image, which map eyes to eyes, mouth to mouth, chin to chin, ears to ears...</p>
+    <p> From there, a midway face in the between of the morphing process and a morphing sequence will be produced.</p>
+    <p> Finally, the project also finds the mean face of a given population (of images) and applies that mean shape onto another image with different facial features and vice versa.</p>
+  </div>
+  
+
+  <!-- Defining Correspondences -->
+  <div class="w3-container" id="defining_correspondences" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Defining Correspondences</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p> This first step is achieved by choosing 50 different corresponding points.</p>
+    <p> In the first pair of images, due to long processing time, I chose smaller images of Brad Pitt and Justin Timberlake for testing the functions. Then bigger images between George Clooney and Robert Downey Jr. are processed. The mappings are showned below. </p>
+    <p> The Triangulation was achieved by using Delaunay algorithm. </p>
+      <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./src/brad_mesh.jpg" style="width:100%" onclick="onClick(this)" alt="Brad Pitt">
+        <img src="./src/justin_mesh.jpg" style="width:100%" onclick="onClick(this)" alt="Justin TimberLake">
+      </div>
+
+      <div class="w3-half">
+        <img src="./src/george_mesh.jpg" style="width:100%" onclick="onClick(this)" alt="George Clooney">
+        <img src="./src/putin_mesh.jpg" style="width:100%" onclick="onClick(this)" alt="Vladimir Putin The Scary">
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Midway Face -->
+  <div class="w3-container" id="midway_face" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Midway Face</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p>An average shape was achieved by using the equation below with the weight of .5:</p>
+    <code> averagep_points[i] = weight * im1_points[i] + (1 - weight) * im2_points[i] </code>
+
+    <p> With the points for images 1 and 2 specified by the user, and a calculated average points between the 2 images, a set of triangles will be generated using Delauney Triangulation.</p>
+    <p> Then each triangle in the source images will be warped into the corresponding triangle in average shape to get the midway face.</p>
+
+    <p> The colors cross-dissolving process was also achieved by averaging the colors in the pixels of the source images with a weight of .5</p>
+    <code> result[a, b] = weight * im1[x1, y1] + (1 - weight) * im2[x2,y2] </code>
+    <p> With x1, y1, x2, y2 found from the step above. </p>
+
+
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./src/brad.jpg" style="width:100%" onclick="onClick(this)" alt="Brad Pitt">
+        <img src="./src/justin_brad_22.jpg" style="width:100%" onclick="onClick(this)" alt="Justitt, Weight = .5">
+        <img src="./src/justin.jpg" style="width:100%" onclick="onClick(this)" alt="Justin TimberLake">
+      </div>
+
+      <div class="w3-half">
+        <img src="./src/george.jpg" style="width:100%" onclick="onClick(this)" alt="George Clooney">
+        <img src="./src/george_putin_22.jpg" style="width:100%" onclick="onClick(this)" alt="Puclooney, Weight = .5">
+        <img src="./src/putin.jpg" style="width:100%" onclick="onClick(this)" alt="Vladimir Putin The Scary">
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Morph Sequence -->
+  <div class="w3-container" id="morph_sequence" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Morph Sequence</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p>Using the same process as the previous part but this time the process is repeated 45 times with different weights genereted by function <code> numpy.linspace(0,1,45)</code> to generate 45 evenly spaced weights from 0 to 1. </p>
+    <p> All the frames are saved and combined into gif files which allows .1 second for each frame. <p>
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./src/justitt.gif" style="width:100%" onclick="onClick(this)" alt="Justitt">
+      </div>
+
+      <div class="w3-half">
+        <img src="./src/putooney.gif" style="width:100%" onclick="onClick(this)" alt="Puclooney">
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mean Face -->
+  <div class="w3-container" id="mean_face" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Mean Face</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p>This section was completed using Dane's Free Data Sets for Statistical Models of Shape which includes 30 male and 7 male faces.</p>
+    <p>The average face shape for the set was achieved by averaging the sum of all the given corresponding points.</p>
+    <code> average_shape = average(sum(each_face_corresponding points)) </code>
+    <p>Then each face is morphed into the average shape and the mean face was obtained by averaging all the morphed faces.</p>
+    <code>mean_face = average(morphed_faces) </code>
+    <br><br>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/meanface_resized.jpg" style="width: 100%">Mean Face</p>
+    <p style="clear: both;"> </p>
+    <br>
+    <p>Some of the faces in the data set warped into the average shape </p>
+    <br>
+    
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./src/15-1f.bmp" style="width:100%" onclick="onClick(this)" alt="15-1f.bmp">
+        <img src="./src/35-1f.bmp" style="width:100%" onclick="onClick(this)" alt="35-1f.bmp">
+        <img src="./src/40-1m.bmp" style="width:100%" onclick="onClick(this)" alt="40-1m.bmp">
+      </div>
+
+      <div class="w3-half">
+        <img src="./src/15toAverage.jpg" style="width:100%" onclick="onClick(this)" alt="15toAverage">
+        <img src="./src/35toAverage.jpg" style="width:100%" onclick="onClick(this)" alt="35toAverage">
+        <img src="./src/40toAverage.jpg" style="width:100%" onclick="onClick(this)" alt="40toAverage">
+      </div>
+    </div>
+
+    <br>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/george_to_mean.jpg" style="width: 100%">George warped into Mean Face</p>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/mean_to_george.jpg" style="width: 100%">Mean Face warped into George</p>
+    <p style="clear: both;"> </p>
+  </div>
+
+
+  <!-- Carricatures -->
+  <div class="w3-container" id="carricatures" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Carricatures</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p>By adding the weighed difference between the shape of George's face and the average shape, and the shape of the mean face itself, the carricatures of George's image were generated.</p>
+
+    <code> carricature = weight * (george's shape - average_shape) + average_shape </code>
+    <p>There's no change when weight = 1. It looks exactly the same as the previous part when George's face is warped into the mean shape when weight = 0. However, George's face is squeezed when weight < 0 and expanded when weight > 1.</p>
+
+    <br><br>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/george_carriaturedt=0.jpg" style="width: 100%">Weight = 0</p>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/george_carriaturedt=1.jpg" style="width: 100%">Weight = 1</p>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/george_carriaturedt=-1.jpg" style="width: 100%">Weight = -1</p>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/george_carriaturedt=2.jpg" style="width: 100%">Weight = 2</p>
+    <p style="clear: both;"></p>
+  </div>
+
+  <!-- Bells And Whistles -->
+  <div class="w3-container" id="bells" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Bells and Whistles - Change of Race, Gender, Smile</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p> I was currious how George would look like if he's morphed into different race, gender and smile. Since I'm so in love with 'Crazy Rich Asians', I would like him to morph into Michelle Yeoh. </p>
+
+    <br><br>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/michelle.jpg" style="width: 100%">Michelle Yeoh</p>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/michelloony.gif" style="width: 100%">Murphhhhh</p>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/george.jpg" style="width: 100%">George</p>
+    <p style="float: left; font-size: 12pt; text-align: center; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"><img src="./src/george_michelle_22.jpg" style="width: 100%">Look how beautiful George is</p>
+    <p style="clear: both;"></p>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Copyright Khoa Hoang 2018</p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

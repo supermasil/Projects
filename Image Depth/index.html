@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<title>CS194 - Lightfield Camera</title>
+<title>Depth Refocusing and Aperture Adjustment with Light Field Data</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Project 5<br>Lightfield Camera</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#overview" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Overview</a> 
+    <a href="#defining_correspondences" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Depth Refocusing</a> 
+    <a href="#midway_face" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Aperture Ajustment</a> 
+    <a href="#morph_sequence" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Reflection</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Project 4 - Lightfield Camera</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Overview -->
+  <div class="w3-container" style="margin-top:80px" id="overview">
+    <h1 class="w3-jumbo"><b>Khoa Hoang</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Overview.</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p> The project utilizes pre-captured data set of images from Stanford's Light Field Archive <code>http://lightfield.stanford.edu/lfs.html</code>, in which every object is photographed by an 2D array of camera to capture light rays from different angles to create a light field. From that light field, any object can be refocused at diferent depths after the images have been taken. Besides, the same thing can be done to the aperture which makes the object appear to be taken at different apertures. This project will accomplish both mentioned above.
+  </div>
+  
+
+  <!-- Defining Correspondences -->
+  <div class="w3-container" id="defining_correspondences" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Depth Refocusing</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p>The general idea is when we take serveral pictures while moving the camera around and keeping the optical axis direction unchanged, the far away objects seem not to be affected but the closer ones will become blurry. By calculating the shifting distances between images and the very central one, scaling the distance up, shifting them appropriately and averaging them, multiple images focused at different depths can be generated.</p>
+    <p>The scaled shifting distance is calculated by:</p>
+    <CODE>x_shift, y_shift = scale * (target_x - ori_x, target_y - ori_y)</CODE>
+    <p>After recentering, the final image is the average of all centralized images:</p>
+    <code>result = average(sum of all centralized images)</code>
+    <p>Using samples of 289 17x17 images each from the data set, the results are shown below.</p>
+    <p>As the scale increases from 0 to 4, the focus moves from far-away points to closer ones until out of the bottom edge and the images become completely blurry.</p>
+
+      <!-- Photo grid (modal) -->
+    <img src="./chess_board.gif" style="width:100%">
+    <img src="./comic.gif" style="width:100%">
+    <div class="w3-row-padding">
+        <div class="w3-half">
+        <img src="./chess_board_output/shifted_scale_0.png" style="width:100%" onclick="onClick(this)" alt="Scale = 0">
+        <img src="./chess_board_output/shifted_scale_1.png" style="width:100%" onclick="onClick(this)" alt="Scale = 1">
+        <img src="./chess_board_output/shifted_scale_2.png" style="width:100%" onclick="onClick(this)" alt="Scale = 2">
+        <img src="./chess_board_output/shifted_scale_3.png" style="width:100%" onclick="onClick(this)" alt="Scale = 3">
+        <img src="./chess_board_output/shifted_scale_4.png" style="width:100%" onclick="onClick(this)" alt="Scale = 4">
+      </div>
+
+      <div class="w3-half">
+        <img src="./comic_output/shifted_scale_0.png" style="width:57.2%" onclick="onClick(this)" alt="Scale = 0">
+        <img src="./comic_output/shifted_scale_1.png" style="width:57.2%" onclick="onClick(this)" alt="Scale = 1">
+        <img src="./comic_output/shifted_scale_2.png" style="width:57.2%" onclick="onClick(this)" alt="Scale = 2">
+        <img src="./comic_output/shifted_scale_3.png" style="width:57.2%" onclick="onClick(this)" alt="Scale = 3">
+        <img src="./comic_output/shifted_scale_4.png" style="width:57.2%" onclick="onClick(this)" alt="Scale = 4">
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Midway Face -->
+  <div class="w3-container" id="midway_face" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Aperture Adjustment</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p>Now to simulate images taken at different aperatures, the scale is fixed at 2 with different radi. As the aperature becomes bigger, more light rays come through it and the images becomes brighter but also more blurry everywhere except where the rays originally converge.</p>
+    <p>Averaging more images generate a larger aperature because more light rays are captured and otherwise.</p>
+    <p>By choosing the central image to be at [8,8] and shifting the other images within the chosen radius to the central image, then averaging out, the resulting images show as if they have been taken at different apertures</p>
+
+    <img src="./lego.gif" style="width:100%">
+    <img src="./bunny.gif" style="width:100%">
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./lego_output/aperture_0.png" style="width:100%" onclick="onClick(this)" alt="Radius = 0">
+        <img src="./lego_output/aperture_1.png" style="width:100%" onclick="onClick(this)" alt="Radius = 1">
+        <img src="./lego_output/aperture_2.png" style="width:100%" onclick="onClick(this)" alt="Radius = 2">
+        <img src="./lego_output/aperture_3.png" style="width:100%" onclick="onClick(this)" alt="Radius = 3">
+        <img src="./lego_output/aperture_4.png" style="width:100%" onclick="onClick(this)" alt="Radius = 4">
+        <img src="./lego_output/aperture_5.png" style="width:100%" onclick="onClick(this)" alt="Radius = 5">
+      </div>
+
+      <div class="w3-half">
+        <img src="./bunny_output/aperture_0.png" style="width:100%" onclick="onClick(this)" alt="Radius = 0">
+        <img src="./bunny_output/aperture_1.png" style="width:100%" onclick="onClick(this)" alt="Radius = 1">
+        <img src="./bunny_output/aperture_2.png" style="width:100%" onclick="onClick(this)" alt="Radius = 2">
+        <img src="./bunny_output/aperture_3.png" style="width:100%" onclick="onClick(this)" alt="Radius = 3">
+        <img src="./bunny_output/aperture_4.png" style="width:100%" onclick="onClick(this)" alt="Radius = 4">
+        <img src="./bunny_output/aperture_0.png" style="width:100%" onclick="onClick(this)" alt="Radius = 5">
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Morph Sequence -->
+  <div class="w3-container" id="morph_sequence" style="margin-top:10px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Reflection</b></h1>
+    <hr style="width:500px;border:5px solid red" class="w3-round">
+    <p>It's really cool to see images taken from a giant array of almost 300 cameras (only Stanford can afford it lol) at different angles even though they were taken at the same time. Surfing through the images reminds me of the movie Matrix because of the rotating effect. This project amazes me how a bunch of images taken at different angles can generate backwards effects into the past as the images can be refocused and aperture adjusted even after the they were taken. Besides, it also reinforces my knowledge of the lightfield and helps me visualize depth control over the light rays.</p>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Copyright Khoa Hoang 2018</p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

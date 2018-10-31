@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<title>Project 3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+  <img class="w3-image" src="mona.jpg" alt="Me" width="1500" height="600">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">PROJECT 3</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">PROJECT 3</h5>
+    <h3 class="w3-hide-medium w3-hide-small"></h3>
+    <h3 class="w3-hide-medium w3-hide-small">Khoa Hoang, September 1, 2018</h3>
+  </div>
+  
+  <!-- Navbar (placed at the bottom of the header image) -->
+</header>
+
+
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+  <!-- Page content -->
+  <hr>
+  <h3 class="w3-center">OVERVIEW</h3>
+
+  <p class="w3-center"> This project involves playing around with the frequency domain and blending images with multiresolution and gradient techniques </p>
+  <hr>
+  <h3 class="w3-center">PART 1 FREQUENCY DOMAIN</h3>
+  <hr>
+  <h3 class="w3-center">PART 1.1 Image Sharpening</h3>
+  
+  <p class="w3-center"> The original image is sharpened by substracting it self form its Gaussian filtered version at different k levels
+  <p class="w3-center">k = 0</p>
+  <img src="hybrid_python/1.1/eminem_sharpened_k=0.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">k = 2</p>
+  <img src="hybrid_python/1.1/eminem_sharpened_k=2.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">k = 4</p>
+  <img src="hybrid_python/1.1/eminem_sharpened_k=4.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">k = 6</p>
+  <img src="hybrid_python/1.1/eminem_sharpened_k=6.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">k = 8</p>
+  <img src="hybrid_python/1.1/eminem_sharpened_k=8.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">k = 10</p>
+  <img src="hybrid_python/1.1/eminem_sharpened_k=10.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <hr>
+  <h3 class="w3-center">PART 1.2 Hybrid Images</h3>
+  <hr>
+  <p class="w3-center"> The illusion is created by putting a high frequency version (Laplacian filtered) of an image on top of a low frequency version (Gaussian filtered) of another image.
+  <h3 class="w3-center">Derek and Nutmeg </h3>
+  <hr>
+  <p class="w3-center">Source image: Derek</p>
+  <img src="hybrid_python/derek.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Original Fourier Transform</p>
+  <img src="hybrid_python/1.2/derek_original.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Lowpass Fourier Transform</p>
+  <img src="hybrid_python/1.2/derek_lowpass.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Source image: Nutmeg</p>
+  <img src="hybrid_python/nutmeg.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Original Fourier Transform</p>
+  <img src="hybrid_python/1.2/nutmeg_original.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Highpass Fourier Transform</p>
+  <img src="hybrid_python/1.2/nutmeg_highpass.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Blended Megrek</p>
+  <img src="hybrid_python/1.2/derek_nutmeg_final_4_30.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <hr>
+  <h3 class="w3-center">Prince and Michael </h3>
+  <hr>
+  <p class="w3-center">Source image: Michael</p>
+  <img src="hybrid_python/michael.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Original Fourier Transform</p>
+  <img src="hybrid_python/1.2/michael_original.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Lowpass Fourier Transform</p>
+  <img src="hybrid_python/1.2/michael_lowpass.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Source image: Prince</p>
+  <img src="hybrid_python/prince.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Original Fourier Transform</p>
+  <img src="hybrid_python/1.2/prince_original.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Highpass Fourier Transform</p>
+  <img src="hybrid_python/1.2/prince_highpass.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Blended Prichael</p>
+  <img src="hybrid_python/1.2/michael_prince_final_2_15.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <hr>
+  <h3 class="w3-center">Trump and Hillary (FAILURE) </h3>
+  <hr>
+  <p class="w3-center"> I couldn't find a good combination of the levels for the filters so that I can create a good blending these two pictures. May be they can't never be friends again after the election. </p>
+  <p class="w3-center">Source image: Hillary</p>
+  <img src="hybrid_python/hillary.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Original Fourier Transform</p>
+  <img src="hybrid_python/1.2/hillary_original.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Highpass Fourier Transform</p>
+  <img src="hybrid_python/1.2/hillary_highpass.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Source image: Trump</p>
+  <img src="hybrid_python/trump.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Original Fourier Transform</p>
+  <img src="hybrid_python/1.2/trump_original.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Lowpass Fourier Transform</p>
+  <img src="hybrid_python/1.2/trump_lowpass.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Blended Trumpillary</p>
+  <img src="hybrid_python/1.2/trump_hillary_final_4_15.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+
+
+  <hr>
+  <h3 class="w3-center">PART 1.3 Gaussian and Laplacian Stacks</h3>
+  <hr>
+  <p class="w3-center"> All the pictures below are achieved by applying Gaussian and Laplacian filters at different levels in stacks and saving the images at each level. </p>
+  <h3 class="w3-center">Mona Lisa</h3>
+  <p class="w3-center"> Leonardo da Vinci is most famous for his multi-layer painting technique which he applied in the painting Mona Lisa. This part will demystify the secret why it seems like she's only smiling at some certain angles by filtering out the low and high frequencies at different levels. </p>
+  <p class="w3-center">Gaussian Stack, level = 0</p>
+  <img src="hybrid_python/1.3/mona_gauss_0.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Gaussian Stack, level = 1</p>
+  <img src="hybrid_python/1.3/mona_gauss_1.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Gaussian Stack, level = 2</p>
+  <img src="hybrid_python/1.3/mona_gauss_2.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">kGaussian Stack, level = 3</p>
+  <img src="hybrid_python/1.3/mona_gauss_3.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">kGaussian Stack, level = 4</p>
+  <img src="hybrid_python/1.3/mona_gauss_4.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <p class="w3-center">Laplacian Stack, level = 0</p>
+  <img src="hybrid_python/1.3/mona_lap_0.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Laplacian Stack, level = 1</p>
+  <img src="hybrid_python/1.3/mona_lap_1.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Laplacian Stack, level = 2</p>
+  <img src="hybrid_python/1.3/mona_lap_2.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Laplacian Stack, level = 3</p>
+  <img src="hybrid_python/1.3/mona_lap_3.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Laplacian Stack, level = 4</p>
+  <img src="hybrid_python/1.3/mona_lap_4.png" class="w3-image" width="1000" height="500">
+
+  <hr>
+
+  <h3 class="w3-center">Lincoln and Gala</h3>
+  <hr>
+  <p class="w3-center"> The same thing happens here when we can see Lincoln clearer at low frequency and Dali sharper at high frequency. </p> 
+  <p class="w3-center">Gaussian Stack, level = 0</p>
+  <img src="hybrid_python/1.3/dali_gauss_0.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Gaussian Stack, level = 1</p>
+  <img src="hybrid_python/1.3/dali_gauss_1.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Gaussian Stack, level = 2</p>
+  <img src="hybrid_python/1.3/dali_gauss_2.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Gaussian Stack, level = 3</p>
+  <img src="hybrid_python/1.3/dali_gauss_3.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Gaussian Stack, level = 4</p>
+  <img src="hybrid_python/1.3/dali_gauss_4.png" class="w3-image" width="1000" height="500">
+
+  <p class="w3-center">Laplacian Stack, level = 0</p>
+  <img src="hybrid_python/1.3/dali_lap_0.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Laplacian Stack, level = 1</p>
+  <img src="hybrid_python/1.3/dali_lap_1.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Laplacian Stack, level = 2</p>
+  <img src="hybrid_python/1.3/dali_lap_2.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Laplacian Stack, level = 3</p>
+  <img src="hybrid_python/1.3/dali_lap_3.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Laplacian Stack, level = 4</p>
+  <img src="hybrid_python/1.3/dali_lap_4.png" class="w3-image" width="1000" height="500">
+
+  <p class="w3-center">Reblend Derek and Nutmeg with stacks of level 3</p>
+  <img src="hybrid_python/1./3nutmeg_derek_using stack_N = 3.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <hr>
+  <h3 class="w3-center">PART 1.4 Multiresolution Blending</h3>
+  <hr>
+
+  <p class="w3-center">Multiresolution blending computes a gentle seam between the two images seperately at each band of image frequencies, resulting in a much smoother seam. </p>
+  <p class="w3-center">Mask</p>
+  <img src="hybrid_python/mask1.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <h3 class="w3-center">Orapple</h3>
+  <p class="w3-center">Source image: Apple</p>
+  <img src="hybrid_python/apple.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Source image: Orange</p>
+  <img src="hybrid_python/orange.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Result</p>
+  <img src="hybrid_python/1.4/apple_orange.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <hr>
+
+  <h3 class="w3-center">Princhael</h3>
+  <p class="w3-center">Source image: Prince</p>
+  <img src="hybrid_python/prince.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Source image: Michael</p>
+  <img src="hybrid_python/michaelp.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Result</p>
+  <img src="hybrid_python/1.4/prince_michaelp.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <hr> 
+
+  <h3 class="w3-center">Justit</h3>
+  <p class="w3-center">Source image: Justin</p>
+  <img src="hybrid_python/justin.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Source image: Brad Pitt</p>
+  <img src="hybrid_python/brad.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Result</p>
+  <img src="hybrid_python/1.4/justin_brad.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <hr>
+
+  <h3 class="w3-center">PART 2 GRADIENT DOMAIN FUSHION</h3>
+  <hr>
+  <h3 class="w3-center">PART 2.1 Toy Problem</h3>
+  <hr>
+  <p class="w3-center"> This part will explore how a picture can be broken down and rebuilt with its gradients. </p>
+  <p class="w3-center">Source image: Toy Story</p>
+  <img src="gradient_starter/toy.png" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Reconstruced image</p>
+  <img src="gradient_starter/2.1/reconstructed_toystory.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+
+  <hr>
+  <h3 class="w3-center">PART 2.2 Poisson Blending</h3>
+  <hr>
+  <p class="w3-center"> This part will explore gradient-domain processing by using Poisson technique to blend two different images seemlessly to each other. </p>
+  <h3 class="w3-center">The Uninvited</h3>
+  <p class="w3-center">Source image: Avengers</p>
+  <img src="gradient_starter/im3.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Source image: Yoda</p>
+  <img src="gradient_starter/penguinChick.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Rude Pasting</p>
+  <img src="gradient_starter/penguin_source.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Result B&W</p>
+  <img src="gradient_starter/2.2/penguin_blended.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Result Color</p>
+  <img src="gradient_starter/2.2/penguin_blended_color.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+
+  <h3 class="w3-center">Avengers' New Member</h3>
+  <p class="w3-center">Source image: Avengers</p>
+  <img src="gradient_starter/avenger.jpg" class="w3-image" width="1000" height="500">
+  <p class="w3-center">Source image: Yoda</p>
+  <img src="gradient_starter/yoda.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Rude Pasting</p>
+  <img src="gradient_starter/yoda_rude.jpg" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Result B&W</p>
+  <img src="gradient_starter/2.2/yoda_blended.png" class="w3-image w3-margin-top" width="1000" height="500">
+  <p class="w3-center">Result Color</p>
+  <img src="gradient_starter/2.2/yoda_blended_1.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+  <p class="w3-center">Failed Case</p>
+  <p class="w3-center"> This happened because the source image is so small and I didn't leave enough margin in the mask so the it was dimmed in the blending process</p>
+  <img src="gradient_starter/2.2/yoda_blended_color_failed.png" class="w3-image w3-margin-top" width="1000" height="500">
+
+
+</header>
